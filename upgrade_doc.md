@@ -433,7 +433,7 @@ kubent --target-version 1.32
 1:16PM INF Loaded ruleset name=deprecated-1-29.rego
 1:16PM INF Loaded ruleset name=deprecated-1-32.rego
 1:16PM INF Loaded ruleset name=deprecated-future.rego
-'''
+```
 ### Flow control resources
 The flowcontrol.apiserver.k8s.io/v1beta3 API version of FlowSchema and PriorityLevelConfiguration is no longer served as of v1.32.
 
