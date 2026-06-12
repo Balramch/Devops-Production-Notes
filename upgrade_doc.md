@@ -219,6 +219,8 @@ aws eks describe-cluster \
   --query cluster.status
 ```
 
+
+
 #### 3. Upgrade Managed Node Group
 
 ```
