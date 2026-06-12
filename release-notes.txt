@@ -31,6 +31,7 @@ kubectl get deployment karpenter -n kube-system -o jsonpath='{.spec.template.spe
 
 
 ## KEDA
+https://keda.sh/docs/2.20/operate/cluster/
 ###  Kubernetes Compatibility
 KEDA	 Kubernetes
 v2.20	 v1.33 - v1.35
@@ -56,4 +57,5 @@ helm upgrade keda kedacore/keda \
   --set crds.install=true
 
 
-
+### External Secret operator
+https://external-secrets.io/latest/introduction/stability-support/
