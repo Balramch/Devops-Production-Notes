@@ -434,6 +434,17 @@ kubent --target-version 1.32
 1:16PM INF Loaded ruleset name=deprecated-1-32.rego
 1:16PM INF Loaded ruleset name=deprecated-future.rego
 '''
+### Flow control resources
+The flowcontrol.apiserver.k8s.io/v1beta3 API version of FlowSchema and PriorityLevelConfiguration is no longer served as of v1.32.
+
+Migrate manifests and API clients to use the flowcontrol.apiserver.k8s.io/v1 API version, available since v1.29.
+All existing persisted objects are accessible via the new API
+Notable changes in flowcontrol.apiserver.k8s.io/v1:
+The PriorityLevelConfiguration spec.limited.nominalConcurrencyShares field only defaults to 30 when unspecified, and an explicit value of 0 is not changed to 30.
+
+
+
+
 
 ### 4. Third-Party Components and Controllers
 
