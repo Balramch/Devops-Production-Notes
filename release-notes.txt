@@ -92,3 +92,15 @@ ESO  Version	Kubernetes Version	Release Date	End of Life
 0.3.x	1.16 → 1.24	Jul 25, 2021	Apr 6, 2022
 
 ### Our current external secret operator external-secrets-0.10.5(Helm)         v0.10.5(API)  
+## steps to upgrade
+1. Apply the matching crd bundle
+kubectl apply -f https://githubusercontent.com
+2. Update the helm repository
+helm repo update external-secrets
+3. Upgrade the helm release
+helm upgrade external-secrets external-secrets/external-secrets \
+  --namespace external-secrets \
+  --version 0.11.0 \
+  --reuse-values
+4. Verify the deployment rollout
+kubectl rollout status deployment external-secrets --namespace external-secrets
