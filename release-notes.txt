@@ -1,6 +1,4 @@
 
-## Great resource:https://artifacthub.io/
-https://marcincuber.medium.com/amazon-eks-upgrade-journey-from-1-31-to-1-32-hi-to-penelope-dfd7f6820e80
 ###  Third-Party Components and Controllers
 
 ### Karpenter Compatibility matrix
@@ -104,3 +102,16 @@ helm upgrade external-secrets external-secrets/external-secrets \
   --reuse-values
 4. Verify the deployment rollout
 kubectl rollout status deployment external-secrets --namespace external-secrets
+
+### aws-load-balancer-controller
+current version: v2.10.0
+upgraded version 1.31 cluster to 1.32 also support
+Recommended version : v2.11.0 to v3.4.x
+
+helm repo update
+helm upgrade aws-load-balancer-controller aws/aws-load-balancer-controller \
+  -n kube-system \
+  --set clusterName=<your-cluster-name> \
+  --set serviceAccount.create=false \
+  --set serviceAccount.name=aws-load-balancer-controller \
+  --version 1.11.0
