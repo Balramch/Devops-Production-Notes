@@ -49,6 +49,11 @@ v2.8	v1.17 - v1.25
 v2.7	v1.17 - v1.25
 
 ### Our latest version keda  2.16.1 
+### upgrade keda
+helm upgrade keda kedacore/keda \
+  --namespace keda \
+  --version 2.19.0 \
+  --set crds.install=true
 
 
 
