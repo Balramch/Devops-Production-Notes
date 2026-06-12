@@ -376,7 +376,6 @@ aws eks describe-nodegroup \
 ```
 
 
-```
 
 ``` aws ssm get-parameter \
 
@@ -399,7 +398,7 @@ aws ssm get-parameter \
 1.31.13-20251209
 
 1.32.9-20251209
-
+```
 
 #### 3. Remove kubernetes deprecated apis
 
