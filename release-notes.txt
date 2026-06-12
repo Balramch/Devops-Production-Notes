@@ -115,3 +115,17 @@ helm upgrade aws-load-balancer-controller aws/aws-load-balancer-controller \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller \
   --version 1.11.0
+
+### kube-prometheus-stack
+Upstream Compatibility MatrixEnvironment MetricYour Current SetupRecommended Setup for Kubernetes 1.32ReasonHelm Chart Versionv68.4.4v80.x.x to v86.x.x+Pulls in native Kubernetes 1.32 API fixes.Prometheus Operatorv0.79.2v0.84.0 to v0.91.0+Adds optimal 1.32 schema validation layers.kube-state-metrics (KSM)v2.13.0v2.15.x or v2.16.xResolves missing metric endpoints for 1.32 pods.
+
+1. Backup system configurations
+helm get values kube-prometheus-stack -n monitoring > kps-values-backup.yaml
+2. Manually replace the CRDS
+kubectl apply -f https://githubusercontent.com
+3. upgrade the chart
+helm repo update
+helm upgrade kube-prometheus-stack prometheus-community/kube-prometheus-stack \
+  -n monitoring \
+  -f kps-values-backup.yaml \
+  --version 82.4.0
