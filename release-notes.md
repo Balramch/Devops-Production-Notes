@@ -1,4 +1,7 @@
-### 4. Third-Party Components and Controllers
+
+## Great resource:https://artifacthub.io/
+https://marcincuber.medium.com/amazon-eks-upgrade-journey-from-1-31-to-1-32-hi-to-penelope-dfd7f6820e80
+###  Third-Party Components and Controllers
 
 ### Karpenter Compatibility matrix
 ### present karpenter version 	karpenter-1.1.1 (helm)                      	1.1.1(API version)  
@@ -25,5 +28,27 @@ helm upgrade karpenter oci://public.ecr.aws/karpenter/karpenter/karpenter \
 # 3. Verify the upgrade
 kubectl get pods -n kube-system | grep karpenter
 kubectl get deployment karpenter -n kube-system -o jsonpath='{.spec.template.spec.containers[0].image}'
+
+
+## KEDA
+###  Kubernetes Compatibility
+KEDA	Kubernetes
+v2.20	v1.33 - v1.35
+v2.19	v1.32 - v1.34
+v2.18	v1.31 - v1.33
+v2.17	v1.30 - v1.32
+v2.16	v1.29 - v1.31
+v2.15	v1.28 - v1.30
+v2.14	v1.27 - v1.29
+v2.13	v1.27 - v1.29
+v2.12	v1.26 - v1.28
+v2.11	v1.25 - v1.27
+v2.10	v1.24 - v1.26
+v2.9	v1.23 - v1.25
+v2.8	v1.17 - v1.25
+v2.7	v1.17 - v1.25
+
+### Our latest version keda  2.16.1 
+
 
 
