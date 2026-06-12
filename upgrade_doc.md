@@ -414,7 +414,25 @@ kubectl get --raw /metrics | grep deprecated
 
 I0610 13:46:31.635839    5228 warnings.go:107] "Warning: v1 ComponentStatus is deprecated in v1.19+"
 ```
-
+### with the tool kubent which has no any apis is deprecated in 1.32 version 
+```
+kubent --target-version 1.32
+1:16PM INF >>> Kube No Trouble `kubent` <<<
+1:16PM INF version 0.7.3 
+1:16PM INF Initializing collectors and retrieving data
+1:16PM INF Target K8s version is 1.32.0
+1:16PM INF Retrieved 141 resources from collector name=Cluster
+1:16PM INF Retrieved 223 resources from collector name="Helm v3"
+1:16PM INF Loaded ruleset name=custom.rego.tmpl
+1:16PM INF Loaded ruleset name=deprecated-1-16.rego
+1:16PM INF Loaded ruleset name=deprecated-1-22.rego
+1:16PM INF Loaded ruleset name=deprecated-1-25.rego
+1:16PM INF Loaded ruleset name=deprecated-1-26.rego
+1:16PM INF Loaded ruleset name=deprecated-1-27.rego
+1:16PM INF Loaded ruleset name=deprecated-1-29.rego
+1:16PM INF Loaded ruleset name=deprecated-1-32.rego
+1:16PM INF Loaded ruleset name=deprecated-future.rego
+'''
 
 ### 4. Third-Party Components and Controllers
 
