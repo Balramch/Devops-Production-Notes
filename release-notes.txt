@@ -91,3 +91,4 @@ ESO  Version	Kubernetes Version	Release Date	End of Life
 0.4.x	1.16 → 1.24	Feb 2, 2022	Oct 9, 2022
 0.3.x	1.16 → 1.24	Jul 25, 2021	Apr 6, 2022
 
+### Our current external secret operator external-secrets-0.10.5(Helm)         v0.10.5(API)  
