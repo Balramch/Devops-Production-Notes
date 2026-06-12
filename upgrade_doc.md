@@ -414,6 +414,7 @@ kubectl get --raw /metrics | grep deprecated
 
 I0610 13:46:31.635839    5228 warnings.go:107] "Warning: v1 ComponentStatus is deprecated in v1.19+"
 ```
+** resultComponentStatus (v1) is deprecated
 ### with the tool kubent which has no any apis is deprecated in 1.32 version 
 ```
 kubent --target-version 1.32
