@@ -1,4 +1,4 @@
-
+### Note: This note is for cluster upgrade 1.31 to 1.32 compatibility.
 ###  Third-Party Components and Controllers
 
 ### Karpenter Compatibility matrix
@@ -129,3 +129,7 @@ helm upgrade kube-prometheus-stack prometheus-community/kube-prometheus-stack \
   -n monitoring \
   -f kps-values-backup.yaml \
   --version 82.4.0
+
+### Loki stack
+current version: loki-stack-2.10.2(Helm) and v2.9.3(api) 
+
