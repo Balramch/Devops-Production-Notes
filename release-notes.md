@@ -6,7 +6,14 @@
 Kubernetes	1.30	1.31	1.32	1.33	1.34	1.35	1.36
 karpenter	>= 0.37	>= 1.0.5	>= 1.2	>= 1.5	>= 1.6	>= 1.9	1.13.x
 
+# Check if you're using Provisioners
+kubectl get provisioners -A
+
+# Check for NodePools (new API)
+kubectl get nodepools -A
+
 # 1. Check available versions in the OCI registry
+
 helm search repo oci://public.ecr.aws/karpenter/karpenter --versions
 
 # 2. Upgrade to v1.2.1 or higher (v1.2.1 is safe)
