@@ -32,10 +32,10 @@ kubectl get deployment karpenter -n kube-system -o jsonpath='{.spec.template.spe
 
 ## KEDA
 ###  Kubernetes Compatibility
-KEDA	Kubernetes
-v2.20	v1.33 - v1.35
-v2.19	v1.32 - v1.34
-v2.18	v1.31 - v1.33
+KEDA	 Kubernetes
+v2.20	 v1.33 - v1.35
+v2.19	 v1.32 - v1.34
+v2.18	 v1.31 - v1.33
 v2.17	v1.30 - v1.32
 v2.16	v1.29 - v1.31
 v2.15	v1.28 - v1.30
