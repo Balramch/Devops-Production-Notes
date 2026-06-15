@@ -272,7 +272,29 @@ helm upgrade loki grafana/loki-stack \
   --namespace monitoring \
   --reuse-values
 ```
+### Istio 
+### Check istio version
+```
+ istioctl version
+### response
+client version: 1.30.1
+control plane version: 1.25.0
+data plane version: 1.25.0 (1 proxies)
+```
+```
+ kubectl -n istio-system get deployment istiod \
+-o jsonpath='{.spec.template.spec.containers[0].image}'
+### Response
+docker.io/istio/pilot:1.25.0  
+```
+### precheck for next version
+```
+ istioctl x precheck
+```
 
+### Support status link for istio release
+https://istio.io/latest/docs/releases/supported-releases/
+### In our case 1.32 supports this istio but recommend to upgrade other istion version 1.26 
 ---
 
 # Pre-Upgrade Validation Checklist
