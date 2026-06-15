@@ -295,6 +295,21 @@ docker.io/istio/pilot:1.25.0
 ### Support status link for istio release
 https://istio.io/latest/docs/releases/supported-releases/
 ### In our case 1.32 supports this istio but recommend to upgrade other istion version 1.26 
+
+### Argocd Compatibility URL
+https://argo-cd.readthedocs.io/en/release-3.4/operator-manual/tested-kubernetes-versions/
+#### Check the current Argocd version
+```
+ kubectl -n argocd get pod -l app.kubernetes.io/name=argocd-server -o jsonpath='{.items[0].spec.containers[0].image}'
+```
+```
+ kubectl -n argocd get pods -o jsonpath='{range .items[*]}{.metadata.name}{" -> "}{.spec.containers[0].image}{"\n"}{end}'
+```
+### Response
+argocd:v3.4.2
+
+
+
 ---
 
 # Pre-Upgrade Validation Checklist
